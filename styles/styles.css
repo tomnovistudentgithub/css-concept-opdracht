@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --small-bg-color: #F69051;
+    --medium-bg-color: #F26D40;
+    --large-bg-color: #260803;
+    --box-bg-color:#F9C48B;
+    --default-margin: 16px;
+}
