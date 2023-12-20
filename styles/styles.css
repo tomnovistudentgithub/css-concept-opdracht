@@ -1,14 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+/* ik heb het helaas niet helemaal afgekregen, het bonus stuk had ik graag gemaakt en ik mis nog wat linkjes. Ik zou graag de uitwerkingen van het geheel terug zien dus incl. bonus */
+
+
 * {
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-:root {
-    --small-bg-color: #F69051;
-    --medium-bg-color: #F26D40;
-    --large-bg-color: #260803;
-    --box-bg-color:#F9C48B;
-    --default-margin: 16px;
+html {
+    font-size: 16px;
+    /*width: 100%;*/
 }
+
+body {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    /*width: 100%;*/
+}
+
+.btn {
+    text-transform: uppercase;
+    background-color: var(--btn-accent-color);
+    color: #F3F6F9;
+    border-radius: 30px;
+    padding: 10px 35px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+    border: none;
+}
+
+.outer-container {
+    /*meestal in een outer container row omdat content gecentreerd moet worden */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.inner-container {
+    /*flex item properties */
+    padding: 10px 0px;
+    flex-basis: 1800px;
+    /*voor mobiel gebruik */
+    margin: 0px 12px;
+
+    /*nieuwe flexbox voor onderliggend element */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+/* ------------------------------- 1.1 Colors -------------------------------------- */
+:root {
+    --bg-color-right-header-and-form1: #260803;
+    ---text-color-behind: #F2F0FF;
+    --bg-color-light-grey: #F3F6F9;
+    --color-purple: #5722CD;
+    --color-blue: #4845E4;
+    --text-color-header-footer: #F3F6F9;
+    --btn-accent-color:#ED4385;
+    --default-margin: 16px;
+    --p-color-black: #0C0C0C;
+    --gradient-color: linear-gradient(65deg, rgba(72,69,228,1) 20%, rgba(87,34,205,1) 68%);
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+header {
+    color: white;
+    background: var(--gradient-color);
+    position: relative;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-basis:500px;
+    justify-content: space-between;
+    /*padding-top: 15px;*/
+}
+
+.header-text-container {
+    margin: 20px;
+    flex-basis: 500px;
+    max-width: 800px;
+    text-align: center;
+
+    padding: 30px;
+    gap:30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-button {
+    flex-basis: 50px;
+    max-width: 300px;
+}
+
+
+    .header-span {
+        flex-basis: 50px;
+        max-width: 100px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+
+        .header-span img {
+            width: 100%;
+            height: 100%;
+
+        }
+
+    /* --------------- 4.2 section text block ------------------------- */
+
+.div-text-block-rekupe {
+    max-width: 1000px;
+
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    font-weight: 400;
+    color: var(--color-purple);
+}
+
+.div-text-block-rekupe h2 {
+     padding: 20px;
+}
+
+.div-text-block-rekupe p {
+    color: var(--p-color-black);
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.section-1 {position: relative;}
+
+.div-text-block-rekupe .text-background-hello {
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+    font-size: 30rem;
+    font-weight: 500;
+
+    color: var(---text-color-behind);
+    opacity: 0.9;
+    z-index: -1;
+}
+
+
+
+/* --------------- 4.3 section image  block ------------------------- */
+.section-2 { background-color: var(--bg-color-light-grey);
+}
+
+
+.article-1-section-2 {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    gap-left: 20px;
+
+}
+
+.article-2-section-2:nth-child(even) {
+    display: flex;
+    flex-direction: row-reverse;
+    gap-left: 20px;
+
+}
+
+.article-3-section-2 {
+
+    display: flex;
+
+    flex-direction: row;
+    gap-left: 20px;
+
+}
+
+h3 { font-size: 1.5em }
+
+.text-block-rolling{
+
+    padding-left: 50px;
+    padding-right: 150px;
+}
+
+.text-block-rolling span {
+
+}
+
+.text-block-rolling svg {
+    fill: var(--color-purple);
+
+}
+
+.work1-image-1-span img {
+    width: 100%;
+    height: 100%;
+    min-width: 20%;
+}
+
+.work1-image-2-span img {
+    width: 100%;
+    height: 100%;
+    min-width: 20%;
+}
+
+.work1-image-3-span img {
+    width: 100%;
+    height: 100%;
+    min-width: 20%;
+}
+
+/* --------------- 4.3 section services ------------------------- */
+
+.div-section-3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 100px 50px;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.services-article {
+    flex-basis: 450px;
+    height: 400px;
+    min-width: 400px;
+    padding: 50px;
+    border: 1px rebeccapurple solid;
+    flex-shrink: 1;
+    flex-grow: 0;
+
+}
+
+.services-article img {
+    width: 50px;
+    height: 50px;
+    box-shadow: none;
+}
+
+.services-article h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-purple);
+}
+
+.services-article p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--p-color-black);
+}
+
+
+/* --------------- 4.4 form ------------------------- */
+.section-4 {
+    background: var(--gradient-color);
+
+}
+
+.section-4-inner-container {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    }
+
+.section-4-inner-container h5 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.section-4-inner-container p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+
+#form {
+    align-items: center;
+    flex-basis: 300px;
+    line-height: 1;
+
+}
+
+.input {
+    width: 100%;
+    padding:5px;
+}
+
+.msg {
+    width: 100%;
+    padding: 5px;
+}
+
+/* --------------- 4.5 footer ------------------------- */
+footer  {
+    color: white;
+    background: black;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+@media screen and (max-width: 576px) {
+    p {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .div-text-block-rekupe {
+     font-size: 0.9em;
+
+    }
+
+    .section-2 h3 {
+        font-size: 1.2em;
+    }
+
+    .section-2 p {
+        font-size: 1em;
+    }
+
+
+    .article-1-section-2 {
+        display: flex;
+        flex-direction: column-reverse;
+
+        justify-content: space-between;
+
+
+    }
+
+    .article-2-section-2:nth-child(even) {
+        display: flex;
+        flex-direction: column-reverse;
+     
+
+    }
+
+    .article-3-section-2 {
+
+        display: flex;
+        flex-direction: column-reverse;
+
+
+    }
+
+    .text-block-rolling {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    footer {
+            font-size: 0.8em;
+        }
+
+
+}
+
+/* ------------------------------- 6. Bonus---------------------------- */
+
