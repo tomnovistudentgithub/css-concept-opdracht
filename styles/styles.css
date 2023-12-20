@@ -16,6 +16,10 @@
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
+
+/* ik heb het helaas niet helemaal afgekregen, het bonus stuk had ik graag gemaakt en ik mis nog wat linkjes. Ik zou graag de uitwerkingen van het geheel terug zien dus incl. bonus */
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -50,14 +54,11 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 5px rebeccapurple solid;
     flex-wrap: wrap;
 
 }
 
 .inner-container {
-    border: 5px dotted black;
-
     /*flex item properties */
     padding: 10px 0px;
     flex-basis: 1800px;
@@ -69,12 +70,6 @@ body {
     flex-direction: column;
     align-items: center;
     
-}
-
-.inner-container img {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-
-
 }
 
 /* ------------------------------- 1.1 Colors -------------------------------------- */
@@ -112,6 +107,7 @@ p {
 header {
     color: white;
     background: var(--gradient-color);
+    position: relative;
 }
 
 nav {
@@ -131,13 +127,11 @@ nav ul {
 }
 
 .header-text-container {
-    /*box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);*/
     margin: 20px;
     flex-basis: 500px;
     max-width: 800px;
-    border-width: 5px;
     text-align: center;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+
     padding: 30px;
     gap:30px;
 
@@ -238,17 +232,9 @@ nav ul {
 h3 { font-size: 1.5em }
 
 .text-block-rolling{
-    /*flex-basis: 40%;*/
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
-    /*align-items: flex-start;*/
+
     padding-left: 50px;
     padding-right: 150px;
-
-
-    /*justify-content: center;*/
-    /*align-items: center;*/
 }
 
 .text-block-rolling span {
@@ -280,8 +266,6 @@ h3 { font-size: 1.5em }
 
 /* --------------- 4.3 section services ------------------------- */
 
-
-
 .div-section-3 {
     display: flex;
     flex-direction: row;
@@ -293,7 +277,7 @@ h3 { font-size: 1.5em }
 }
 
 .services-article {
-    flex-basis: 400px;
+    flex-basis: 450px;
     height: 400px;
     min-width: 400px;
     padding: 50px;
@@ -325,7 +309,7 @@ h3 { font-size: 1.5em }
 /* --------------- 4.4 form ------------------------- */
 .section-4 {
     background: var(--gradient-color);
-    border: 8px solid black;
+
 }
 
 .section-4-inner-container {
@@ -436,3 +420,6 @@ footer  {
 
 
 }
+
+/* ------------------------------- 6. Bonus---------------------------- */
+
